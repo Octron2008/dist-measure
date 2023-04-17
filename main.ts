@@ -66,6 +66,8 @@ basic.forever(function () {
         if (dist < set_dist) {
             time_finish = control.millis()
             time2 = time_finish - time_start
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, 0)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, 0)
             state = 4
         }
     }
