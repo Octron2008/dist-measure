@@ -12,12 +12,14 @@ basic.forever(function () {
         basic.pause(200)
         rawdist = pins.analogReadPin(AnalogPin.P2)
         dist = rawdist * 1.1
+        basic.showNumber(dist)
         basic.pause(200)
         if (dist < set_dist) {
             state = 1
         }
     }
-    while (false) {
-    	
+    while (state == 1) {
+        kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, 0)
+        kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, 0)
     }
 })
