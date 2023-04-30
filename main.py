@@ -1,6 +1,3 @@
-def checkdist():
-    pass
-
 def on_button_pressed_a():
     global state
     state = 1
