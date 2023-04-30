@@ -1,6 +1,3 @@
-function checkdist () {
-	
-}
 input.onButtonPressed(Button.A, function () {
     state = 1
 })
